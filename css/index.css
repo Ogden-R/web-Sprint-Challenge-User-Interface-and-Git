@@ -3,26 +3,27 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    
 /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure, 
     footer, header, hgroup, menu, nav, section {
@@ -49,6 +50,8 @@ time, mark, audio, video {
 /*general styles*/
     * {
         box-sizing: border-box;
+        max-width:100%;
+
     }
 
     html, body {
@@ -68,26 +71,31 @@ time, mark, audio, video {
 
 /*header styles*/
     nav{
-        padding:3%;
-        margin:auto;
+        padding:0 auto;
+        margin:0 1% 3%;
         display:flex;
-        justify-content:space-evenly;
-        justify-content:center;
-    
+        /* justify-content:space-between;align-items:center; */
     }
+
     .logo{
-        width:30%;
+        width:20%;
         display:flex;
+        justify-content:flex-start;
+        flex-grow:0;
     }
+
     .links{
         width:70%;
+        margin:4% 1% 0 4%;
         display:flex;
         justify-content:space-between;
         align-items:center;
     }
+
     a{
         text-decoration:none;
         color:black;
+        text-align:center
     }
 
  /* home page background image */
@@ -103,10 +111,11 @@ time, mark, audio, video {
 /* about page background image */
     .skyline{
         background-image: url('../img/jumbo-about.png');
+        width:100%;
         background-size:cover;
         background-position:center;
         background-repeat:no-repeat;
-        margin:0 auto 4%;
+        margin:0 auto 1%;
         height:25vh;
     }
 
@@ -115,6 +124,7 @@ time, mark, audio, video {
         width: 100%;
         margin: 0 auto;
     }
+
     .top-content {
         display: flex;
         flex-wrap: wrap;
@@ -122,15 +132,18 @@ time, mark, audio, video {
         margin-bottom: 20px;
         border-bottom: 1px dashed black;
     }
+
     .top-content .text-container {
         width: 48%;
         padding: 0 1%;
         padding-bottom: 20px;  
     }
+
     .middle-content {
         margin-bottom: 20px;
         border-bottom: 1px dashed black;
     }
+
     .middle-content h2 {
         padding: 0 2%;
         margin-bottom: 0;
@@ -146,9 +159,7 @@ time, mark, audio, video {
     .middle-content .boxes div {
         width: 12.5%;
         height: 100px;
-        /* background: black; */
         margin: 20px 2.5%;
-        /* color: white; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -181,6 +192,78 @@ time, mark, audio, video {
     .bottom-content .text-container:last-child {
         padding-right: 0;
     }
+
+/*About page body styles*/
+    #wrapper{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+    } 
+
+    section div{
+        padding:2%;
+        margin:1%;
+    }
+
+    .aboutpage{
+        width:100%;
+        margin:.5%;
+        border-bottom:1px dotted black; 
+        padding-bottom:2%;
+    } 
+
+    .stratwork, .workcollab{
+        width:50%;
+        margin:1% auto;
+        padding:1%;
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+    } 
+
+    body h2{
+        margin:10px auto;
+    }
+
+    .stratwork p, .workcollab p{
+        margin:5px auto;
+    }
+
+    button{
+        padding:10px;
+        margin:10px auto;
+        border-radius:10px;
+    }
+
+    body img{
+        margin-top:30px;
+        width:100%;
+    }
+
+    .aboutpage, .strategy, .howWork, .placework, .collab{
+        border-bottom:1px dotted black; 
+        margin:.5px auto;
+        padding-bottom:2%;
+    }
+
+/*lets work together section*/
+    .together{
+        margin:15px auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-content:space-around;
+    }
+    .together h2{
+        width:100%;
+        padding-bottom:1%;
+    
+    }
+    .together p{
+        width:100%;
+        padding:10px;
+    }
+
 /*footer styles*/
     footer {
         width: 100%;
