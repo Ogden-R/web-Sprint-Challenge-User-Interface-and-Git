@@ -46,7 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+/*general styles*/
 * {
     box-sizing: border-box;
 }
@@ -54,6 +54,7 @@ table {
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 h1, h2, h3, h4, h5 {
@@ -65,9 +66,43 @@ h1, h2, h3, h4, h5 {
 p {
     line-height: 1.4;
 }
+/*header styles*/
+nav{
+    padding:3%;
+    margin:auto;
+    display:flex;
+    justify-content:space-evenly;
+    justify-content:center;
+   
+}
+.logo{
+    width:30%;
+    display:flex;
+}
+.links{
+    width:70%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
 
+/*background image section*/
+.highway{
+    background-image: url('../img/jumbo.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    margin:0 auto 4%;
+    height:40vh;
+}
+
+/*body styles*/
 .container {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
 }
 
