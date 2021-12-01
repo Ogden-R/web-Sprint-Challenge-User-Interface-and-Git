@@ -21,169 +21,146 @@
         outline: 0;
         }
 
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    
+/* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
     ol, ul {
         list-style: none;
-        }
-    /* tables still need cellspacing="0" in the markup */
-    table {
-        border-collapse: separate;
-        border-spacing: 0;
-        }
-    caption, th, td {
-        font-weight: normal;
-        text-align: left;
-        }
-    /* remove possible quote marks (") from <q> & <blockquote> */
-    blockquote:before, blockquote:after, q:before, q:after {
-        content: "";
-        }
+    }
     blockquote, q {
-        quotes: "" "";
-        }
-    /*end of CSS reset*/
-
-/* general styles */
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+/*general styles*/
     * {
         box-sizing: border-box;
         max-width:100%;
-        border:1px solid black;
+
     }
 
     html, body {
-        font-size:62.5%;
         height: 100%;
-        font-family: 'Roboto', sans-serif;
-    }
-    html{
-        width:90%;
-        margin:0 auto;
+        font-family: 'Roboto', sans-serif;  
     }
 
-    h1, h2, h3, h4, h5, p, a, button{
+    h1, h2, h3, h4, h5 {
         font-size: 1.8rem;
-        /* margin-bottom: 1.5rem; */
+        margin-bottom: 15px;
         font-family: 'Rubik', sans-serif;
     }
 
-    /* p {
+    p {
         line-height: 1.4;
-    } */
-
-    
-
-/* navigation bar styles */
-    header{
-        padding:3%
     }
 
+/*header styles*/
     nav{
-        padding: 0 auto;
-        display:flex; 
-        align-items:flex-end;
-        height:55px;
+        padding:0 auto;
+        margin:0 1% 3%;
+        display:flex;
+        /* justify-content:space-between;align-items:center; */
     }
 
     .logo{
-        width:17%;
+        width:20%;
         display:flex;
-        justify-content: flex-start;
-        height:100%;
+        justify-content:flex-start;
+        flex-grow:0;
     }
 
-    .navBar{
-        width:83%;
+    .links{
+        width:70%;
+        margin:4% 1% 0 4%;
         display:flex;
         justify-content:space-between;
-        align-content: center;
+        align-items:center;
     }
 
-    nav a{
-        
-        display:flex;
+    a{
         text-decoration:none;
         color:black;
-        align-content:center;
-        text-align:center;
-        width:25%;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
+        text-align:center
     }
 
-/* top content styles */
+ /* home page background image */
+    .highway{
+        background-image: url('../img/jumbo.jpg');
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        margin:0 auto 4%;
+        height:25vh;
+    }
+
+/* about page background image */
+    .skyline{
+        background-image: url('../img/jumbo-about.png');
+        width:100%;
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        margin:0 auto 1%;
+        height:25vh;
+    }
+
+/*body styles*/
 
     .container {
         width: 100%;
         margin: 0 auto;
     }
-    #AboutPage{
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    #img img{
-        padding:0 auto;
-        width:100%;
-    }
 
     .top-content {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
+
         justify-content: space-evenly;
         margin-bottom: 20px;
         border-bottom: 1px dashed black;
     }
 
-    .text-container{
-        display: flex;
-        margin: 2%;
-        flex-direction: column;
-        border-bottom: 1.5px dashed black;
-    }
-    #full2, #third1, #third2, #third3, #future, #past{
-        border:none;
-    }
-    #full, #full2, #full3{
-        width:100%
-    }
-    #full h2{
-        padding:1%;
-    }
-    #full2 h2{
-        padding:1%;
-    }
-    #future, #past, #half1, #half2, #half3, #half4{
-        display: flex;
-        flex-direction: row;
-        flex-wrap:wrap;
-        align-items: flex-start;
-        width: 46%;
-    }
-    .text-container img{
-        width:100%;
-    }
-    .text-container h2, .text-container p{
-        width:100%;
-        display: flex;
-        flex-direction:column;
-        flex-wrap:wrap;
-        padding: 2%;
-        margin:2%;
-    }
-    .container button{
-        border-radius:10px;
-        background-color:white;
-        color:black;
-        text-decoration:none;
-        padding:2% 6%;
-        border:2px solid black;
-        margin-bottom:3%;
-    }
-    
 
-/* middle content styles */
+    .top-content .text-container {
+        width: 48%;
+        padding: 0 1%;
+        padding-bottom: 20px;  
+    }
+
+
     .middle-content {
         margin-bottom: 20px;
         border-bottom: 1px dashed black;
@@ -194,84 +171,143 @@
         margin-bottom: 0;
     }
 
-    .boxes {
+
+/* home page box section*/
+    .middle-content .boxes {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
 
-    .middle-content .boxes div{
+
+    .middle-content .boxes div {
         width: 12.5%;
         height: 100px;
         margin: 20px 2.5%;
-        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
+        border:2px solid #4f4f4f;
     }
-    #box1{
-        background-color:teal;
-    }
-    #box2{
-        background-color:gold;
-    }
-    #box3{
-        background-color:cadetblue;
-    }
-    #box4{
-        background-color:coral;
-    }
-    #box5{
-        background-color:crimson;
-    }
-    #box6{
-        background-color:forestgreen;
-    }
-    #box7{
-        background-color:darkorchid;
-    }
-    #box8{
-        background-color:hotpink;
-    }
-    #box9{
-        background-color:indigo;
-    }
-    #box10{
-        background-color:dodgerblue;
-    }
-/* bottom content styles */
+
+/*home page box colors*/
+    .box1{background-color:teal;}
+    .box2{background:gold;}
+    .box3{background:cadetblue;}
+    .box4{background:coral;}
+    .box5{background:crimson;}
+    .box6{background:forestgreen;}
+    .box7{background:darkorchid;}
+    .box8{background:hotpink;}
+    .box9{background:indigo}
+    .box0{background:dodgerblue;}
+
+/*home page body organization/styles*/    
     .bottom-content {
         display: flex;
         margin: 0 2% 20px;
         justify-content: space-around;
-    }
+}
 
     .bottom-content .text-container {
-        /* padding-right: 4%; */
+        padding-right: 4%;
     }
 
     .bottom-content .text-container:last-child {
         padding-right: 0;
     }
-/* footer styles */
+
+/*About page body styles*/
+    #wrapper{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+    } 
+
+    section div{
+        padding:2%;
+        margin:1%;
+    }
+
+    .aboutpage{
+        width:100%;
+        margin:.5%;
+        border-bottom:1px dotted black; 
+        padding-bottom:2%;
+    } 
+
+    .stratwork, .workcollab{
+        width:50%;
+        margin:1% auto;
+        padding:1%;
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+    } 
+
+    body h2{
+        margin:10px auto;
+    }
+
+    .stratwork p, .workcollab p{
+        margin:5px auto;
+    }
+
+    button{
+        padding:10px;
+        margin:10px auto;
+        border-radius:10px;
+    }
+
+    body img{
+        margin-top:30px;
+        width:100%;
+    }
+
+    .aboutpage, .strategy, .howWork, .placework, .collab{
+        border-bottom:1px dotted black; 
+        margin:.5px auto;
+        padding-bottom:2%;
+    }
+
+/*lets work together section*/
+    .together{
+        margin:15px auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-content:space-around;
+    }
+    .together h2{
+        width:100%;
+        padding-bottom:1%;
+    
+    }
+    .together p{
+        width:100%;
+        padding:10px;
+    }
+
+/*footer styles*/
     footer {
         width: 100%;
         background: black;
-        padding:2%;
+
     }
 
     footer nav {
         width: 60%;
+        margin-right:40%;
         display: flex;
         justify-content: space-between;
-        align-items:stretch;
+        align-items: center;
         padding: 20px 2%;
         font-size: 14px;
-        
+
     }
 
     footer nav a {
         color: white;
         text-decoration: none;
-        background-color: black;
+
     }
