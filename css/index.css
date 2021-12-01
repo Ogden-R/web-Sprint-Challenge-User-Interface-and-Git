@@ -2,145 +2,276 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/* css reset */
+    html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, 
+    del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, 
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, 
+    dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+        vertical-align: baseline;
+        font-family: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        }
+    /* remember to define focus styles! */
+    :focus {
+        outline: 0;
+        }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+    ol, ul {
+        list-style: none;
+        }
+    /* tables still need cellspacing="0" in the markup */
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+        }
+    caption, th, td {
+        font-weight: normal;
+        text-align: left;
+        }
+    /* remove possible quote marks (") from <q> & <blockquote> */
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: "";
+        }
+    blockquote, q {
+        quotes: "" "";
+        }
+    /*end of CSS reset*/
 
-* {
-    box-sizing: border-box;
-}
+/* general styles */
+    * {
+        box-sizing: border-box;
+        max-width:100%;
+        border:1px solid black;
+    }
 
-html, body {
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-}
+    html, body {
+        font-size:62.5%;
+        height: 100%;
+        font-family: 'Roboto', sans-serif;
+    }
+    html{
+        width:90%;
+        margin:0 auto;
+    }
 
-h1, h2, h3, h4, h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-family: 'Rubik', sans-serif;
-}
+    h1, h2, h3, h4, h5, p, a, button{
+        font-size: 1.8rem;
+        /* margin-bottom: 1.5rem; */
+        font-family: 'Rubik', sans-serif;
+    }
 
-p {
-    line-height: 1.4;
-}
+    /* p {
+        line-height: 1.4;
+    } */
 
-.container {
-    width: 800px;
-    margin: 0 auto;
-}
+    
 
-.top-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
-}
+/* navigation bar styles */
+    header{
+        padding:3%
+    }
 
-.top-content .text-container {
-    width: 48%;
-    padding: 0 1%;
-    padding-bottom: 20px;  
-}
+    nav{
+        padding: 0 auto;
+        display:flex; 
+        align-items:flex-end;
+        height:55px;
+    }
 
-.middle-content {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
-}
+    .logo{
+        width:17%;
+        display:flex;
+        justify-content: flex-start;
+        height:100%;
+    }
 
-.middle-content h2 {
-    padding: 0 2%;
-    margin-bottom: 0;
-}
+    .navBar{
+        width:83%;
+        display:flex;
+        justify-content:space-between;
+        align-content: center;
+    }
 
-.middle-content .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+    nav a{
+        
+        display:flex;
+        text-decoration:none;
+        color:black;
+        align-content:center;
+        text-align:center;
+        width:25%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
 
-.middle-content .boxes .box {
-    width: 12.5%;
-    height: 100px;
-    background: black;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* top content styles */
 
-.bottom-content {
-    display: flex;
-    margin: 0 2% 20px;
-    justify-content: space-around;
-}
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #AboutPage{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #img img{
+        padding:0 auto;
+        width:100%;
+    }
 
-.bottom-content .text-container {
-    padding-right: 4%;
-}
+    .top-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+        border-bottom: 1px dashed black;
+    }
 
-.bottom-content .text-container:last-child {
-    padding-right: 0;
-}
+    .text-container{
+        display: flex;
+        margin: 2%;
+        flex-direction: column;
+        border-bottom: 1.5px dashed black;
+    }
+    #full2, #third1, #third2, #third3, #future, #past{
+        border:none;
+    }
+    #full, #full2, #full3{
+        width:100%
+    }
+    #full h2{
+        padding:1%;
+    }
+    #full2 h2{
+        padding:1%;
+    }
+    #future, #past, #half1, #half2, #half3, #half4{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        align-items: flex-start;
+        width: 46%;
+    }
+    .text-container img{
+        width:100%;
+    }
+    .text-container h2, .text-container p{
+        width:100%;
+        display: flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        padding: 2%;
+        margin:2%;
+    }
+    .container button{
+        border-radius:10px;
+        background-color:white;
+        color:black;
+        text-decoration:none;
+        padding:2% 6%;
+        border:2px solid black;
+        margin-bottom:3%;
+    }
+    
 
-footer {
-    width: 100%;
-    background: black;
-}
+/* middle content styles */
+    .middle-content {
+        margin-bottom: 20px;
+        border-bottom: 1px dashed black;
+    }
 
-footer nav {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
-}
+    .middle-content h2 {
+        padding: 0 2%;
+        margin-bottom: 0;
+    }
 
-footer nav a {
-    color: white;
-    text-decoration: none;
-}
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .middle-content .boxes div{
+        width: 12.5%;
+        height: 100px;
+        margin: 20px 2.5%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #box1{
+        background-color:teal;
+    }
+    #box2{
+        background-color:gold;
+    }
+    #box3{
+        background-color:cadetblue;
+    }
+    #box4{
+        background-color:coral;
+    }
+    #box5{
+        background-color:crimson;
+    }
+    #box6{
+        background-color:forestgreen;
+    }
+    #box7{
+        background-color:darkorchid;
+    }
+    #box8{
+        background-color:hotpink;
+    }
+    #box9{
+        background-color:indigo;
+    }
+    #box10{
+        background-color:dodgerblue;
+    }
+/* bottom content styles */
+    .bottom-content {
+        display: flex;
+        margin: 0 2% 20px;
+        justify-content: space-around;
+    }
+
+    .bottom-content .text-container {
+        /* padding-right: 4%; */
+    }
+
+    .bottom-content .text-container:last-child {
+        padding-right: 0;
+    }
+/* footer styles */
+    footer {
+        width: 100%;
+        background: black;
+        padding:2%;
+    }
+
+    footer nav {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items:stretch;
+        padding: 20px 2%;
+        font-size: 14px;
+        
+    }
+
+    footer nav a {
+        color: white;
+        text-decoration: none;
+        background-color: black;
+    }
